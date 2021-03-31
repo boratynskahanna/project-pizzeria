@@ -180,14 +180,11 @@
           const optionSelected = formData[paramId] && formData[paramId].includes(optionId);
 
           // check if we found the image
-          if (optionImage) {
-
+          if (optionImage && optionSelected) {
+            optionImage.classList.add(classNames.menuProduct.imageVisible);
             // check if option is chosen
-            if (optionSelected) {
-              optionImage.classList.add(classNames.menuProduct.imageVisible);
-            } else {
-              optionImage.classList.remove(classNames.menuProduct.imageVisible);
-            }
+          } else if (optionImage && !optionSelected) {
+            optionImage.classList.remove(classNames.menuProduct.imageVisible);
           }
         }
       }
@@ -233,7 +230,7 @@
       thisWidget.input.value = thisWidget.value;
 
       if (thisWidget.value !== newValue && !isNaN(newValue) && newValue >= settings.amountWidget.defaultMin && newValue <= settings.amountWidget.defaultMax) {
-          thisWidget.value = newValue;
+        thisWidget.value = newValue;
       }
     }
 
