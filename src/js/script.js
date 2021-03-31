@@ -44,8 +44,8 @@
   const settings = {
     amountWidget: {
       defaultValue: 1,
-      defaultMin: 1,
-      defaultMax: 9,
+      defaultMin: 0,
+      defaultMax: 10,
     }
   };
 
@@ -179,16 +179,14 @@
           const optionImage = thisProduct.imageWrapper.querySelector(`.${paramId}-${optionId}`);
           const optionSelected = formData[paramId] && formData[paramId].includes(optionId);
 
-          // check if we found the image
+          // check if we found the image and check if option is chosen
           if (optionImage && optionSelected) {
             optionImage.classList.add(classNames.menuProduct.imageVisible);
-            // check if option is chosen
           } else if (optionImage && !optionSelected) {
             optionImage.classList.remove(classNames.menuProduct.imageVisible);
           }
         }
       }
-    
       // update calculated price in the HTML
       thisProduct.priceElem.innerHTML = price;
     }
