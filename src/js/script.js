@@ -253,10 +253,11 @@
     setValue(value) {
       const thisWidget = this;
       const newValue = parseInt(value);
-      thisWidget.value = settings.amountWidget.defaultValue;
-
+      if (!thisWidget.value) {
+        thisWidget.value = settings.amountWidget.defaultValue;
+      }
       // check the conditions
-      if (/*newValue !== thisWidget.value &&*/ !isNaN(newValue) && newValue >= settings.amountWidget.defaultMin && newValue <= settings.amountWidget.defaultMax) {
+      if (!isNaN(newValue) && newValue > settings.amountWidget.defaultMin && newValue < settings.amountWidget.defaultMax) {
         thisWidget.value = newValue;
         thisWidget.announce();
       }
