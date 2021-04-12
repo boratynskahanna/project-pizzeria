@@ -89,6 +89,7 @@ class Cart {
     } else if (thisCart.subtotalPrice <= 0) {
       thisCart.dom.subtotalPrice.innerHTML = 0;
       thisCart.dom.deliveryFee.innerHTML = 0;
+      thisCart.dom.totalPriceInCartDescription.innerHTML = 0;
     }
   }
 
