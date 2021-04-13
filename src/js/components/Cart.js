@@ -90,6 +90,7 @@ class Cart {
       thisCart.dom.subtotalPrice.innerHTML = 0;
       thisCart.dom.deliveryFee.innerHTML = 0;
       thisCart.dom.totalPriceInCartDescription.innerHTML = 0;
+      thisCart.dom.totalPrice.innerHTML = 0;
     }
   }
 
