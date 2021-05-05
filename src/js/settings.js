@@ -3,12 +3,14 @@ export const select = {
     menuProduct: '#template-menu-product',
     cartProduct: '#template-cart-product',
     bookingWidget: '#template-booking-widget',
+    home: '#template-home-page',
   },
   containerOf: {
     menu: '#product-list',
     cart: '#cart',
     pages: '#pages',
     booking: '.booking-wrapper',
+    home: '.home-wrapper',
   },
   all: {
     menuProducts: '#product-list > .product',
@@ -37,6 +39,11 @@ export const select = {
       wrapper: '.hour-picker',
       input: 'input[type="range"]',
       output: '.output',
+    },
+    home: {
+      carousel: '.carousel-wrapper',
+      orderBox: '.order-box',
+      bookingBok: '.booking-box',
     },
   },
   cart: {
@@ -70,6 +77,7 @@ export const select = {
   },
   nav: {
     links: '.main-nav a',
+    homeLinks: '.main-boxes .nav-links',
   },
 };
 

@@ -273,7 +273,7 @@ class Booking {
         thisBooking.makeBooked(parsedResponse.date, parsedResponse.hour, parsedResponse.duration, parsedResponse.table);
         thisBooking.getData();
       });
-        thisBooking.removeSelected();
+    thisBooking.removeSelected();
   }
 }
 
