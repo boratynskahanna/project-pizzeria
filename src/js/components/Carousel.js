@@ -15,7 +15,7 @@ class Carousel {
     const thisCarousel = this;
   
     // eslint-disable-next-line no-undef
-    new Flickity(thisCarousel.wrapper, {
+    new Flickity (thisCarousel.wrapper, {
       cellAlign: 'left',
       contain: true,
       autoPlay: true,

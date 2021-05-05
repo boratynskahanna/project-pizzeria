@@ -122,7 +122,7 @@ const app = {
     console.log('settings:', settings);
     console.log('templates:', templates);
 
-    //thisApp.initHome();
+    thisApp.initHome();
     thisApp.initPages();
     thisApp.initData();
     thisApp.initCart();
